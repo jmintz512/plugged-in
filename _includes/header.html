@@ -12,8 +12,13 @@
           {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
           {%- include snippets/get-nav-url.html path=_paths_root -%}
           {%- if site.title -%}
-            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}">{{ site.title }}</a>
+            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}" style="font-family: 'Poppins';font-weight: 700;">{{ site.title }}</a>
           {%- endif -%}
+
+
+          <!-- <a href="{{ __return }}">
+            <img src="https://i.imgur.com/HmvIH5a.png" alt="" style="width:auto;height:1.5em;">
+          </a> -->
         </div>
         {%- if site.search.provider -%}
           <button class="button button--secondary button--circle search-button js-search-toggle"><i class="fas fa-search"></i></button>
