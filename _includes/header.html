@@ -12,7 +12,7 @@
           {%- assign _paths_root = site.paths.root | default: site.data.variables.default.paths.root  -%}
           {%- include snippets/get-nav-url.html path=_paths_root -%}
           {%- if site.title -%}
-            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}" style="font-family: 'Poppins';font-weight: 600;">{{ site.title }}</a>
+            <a title="{%- if site.description -%}{{ site.description }}{%- endif -%}" href="{{ __return }}" style="font-size: 25px; font-family: 'Poppins'; font-weight: 600;">{{ site.title }}</a>
           {%- endif -%}
 
 
@@ -26,7 +26,7 @@
       </div>
       {%- if site.data.navigation.header -%}
       <nav class="navigation">
-        <ul>
+        <ul style="font-family: "Poppins";">
           {%- for _item in site.data.navigation.header -%}
             {%- include snippets/get-nav-url.html path=_item.url -%}
             {%- assign _nav_url = __return -%}
