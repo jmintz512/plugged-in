@@ -1,3 +1,57 @@
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 30px 30px 0px 5px;
+}
+
+.left {
+  width: 40%;
+}
+
+.center-1 {
+  width: 20%;
+}
+
+.center-2 {
+  width: 20%;
+}
+
+.right {
+  width: 20%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+@media screen and (max-width: 800px) {
+  .left {
+    width: 100%;
+  }
+
+  .center-1 {
+    width: 50%;
+  }
+
+  .center-2 {
+    width: 50%;
+  }
+
+  .right {
+    width: 50%;
+  }
+
+}
+
+</style>
 
 <footer class="footer py-4 js-page-footer">
   <div class="main">
@@ -9,12 +63,40 @@
       {%- assign _site_author_itemtype = 'http://schema.org/Person' -%}
     {%- endif -%}
 
+  <div class="row">
+    <div class="column left">
+      <p style="color:#8295BA;">Our mission is to provide online and offline learning resources for students staying at home.</p>
+    </div>
+
+    <div class="column center-1" style="font-size: 13px;">
+      <p style="color:#8295BA">Academic Subjects</p>
+      <p>Mathematics</p>
+      <p>General Science</p>
+      <p>English</p>
+    </div>
+
+    <div class="column center-2" style="font-size: 13px;">
+      <p style="color:#8295BA">Creative Content</p>
+      <p>Home Chemistry</p>
+      <br>
+    </div>
+
+    <div class="column right" style="font-size: 13px;">
+      <p style="color:#8295BA">Other</p>
+      <p>About</p>
+      <p>Contact</p>
+      <br>
+    </div>
+
+  </div>
+
     <div itemscope itemtype="{{ _site_author_itemtype }}">
       <meta itemprop="name" content="{{ _site_author.name }}">
       {%- assign _site_author_url = _site_author.url | default: '/'-%}
       {%- include snippets/get-nav-url.html path=_site_author_url -%}
       {%- assign _site_author_url = __return -%}
       <meta itemprop="url" content="{{ _site_author_url }}">
+
       {%- if _site_author.bio -%}
         <meta itemprop="description" content="{{ _site_author.bio }}">
       {%- endif -%}

@@ -13,8 +13,8 @@ highlight_theme: default # "default" (default), "tomorrow", "tomorrow-night", "t
 url     : # the base hostname & protocol for your site e.g. https://www.someone.com
 baseurl : # does not include hostname
 title   : Plugged-IN
-description: > # this means to ignore newlines until "Language & timezone"
-  Your Site Description
+description:  # this means to ignore newlines until "Language & timezone"
+  An online resource for students learning at home.
 
 
 ## => Language and Timezone
@@ -30,7 +30,7 @@ author:
   name      : Plugged-IN
   url       :
   avatar    : # path or url of avatar image (square)
-  bio       :
+  bio       : We are a team of students at JIS providing online resources for students learning at home.
   email     :
   facebook  : # "user_name" the last part of your profile url, e.g. https://www.facebook.com/user_name
   twitter   : # "user_name" the last part of your profile url, e.g. https://twitter.com/user_name
